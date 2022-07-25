@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0;
+    background: linear-gradient(to top, #22c1c3, #fdbb2d);
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first {
+    color: rgb(84, 84, 84);
+    display: flex;
+    padding: 3rem;
+    font-family: "Libre Barcode 39 Text", cursive;
+    font-size: 5rem;
+    background-color: white;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.205);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+}
+.subtext {
+    font-family: "EB Garamond", serif;
+    text-decoration: underline;
+    text-underline-offset: 0.7rem;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    color: rgb(84, 84, 84);
+    background: rgba(255, 255, 255, 0.205);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    padding: 2rem 3rem;
+}
+.card-shell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    margin-bottom: 15rem;
+}
+.card {
+    box-sizing: border-box;
+    display: inline-flex;
+    padding: 4rem;
+    flex-direction: column;
+    background-color: rgb(255, 214, 214);
+    min-width: 21rem;
+    min-height: 32rem;
+    max-height: 39rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.205);
+    border-radius: 16px;
+    backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    box-shadow: 0.5px 4.6px 10.5px -24px rgb(0, 0, 0),
+        1.2px 11.7px 26.6px -24px rgba(0, 0, 0, 0.642),
+        2.5px 23.9px 54.2px -24px rgba(0, 0, 0, 0.517),
+        5.1px 49.3px 111.7px -24px rgba(0, 0, 0, 0.413), 14px 135px 306px -24px rgba(0, 0, 0, 0.288);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+img {
+    min-width: 22rem;
+    min-height: 21rem;
+    max-width: 22rem;
+}
+.the-text {
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+.titler {
+    font-family: "Press Start 2P", cursive;
+}
+.card:hover {
+    position: relative;
+    transform: scale(1.5);
+    background: rgba(253, 145, 194, 0.205);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    min-width: 20rem;
+    min-height: 20rem;
+    z-index: 10;
+    margin: 8rem 12em;
+}
