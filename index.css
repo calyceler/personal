@@ -1,14 +1,20 @@
 html,
 body {
-    margin: 0;
-    background: linear-gradient(to top, #22c1c3, #fdbb2d);
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    margin: 0;
+    padding-bottom: 3rem;
 }
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 .first {
     color: rgb(84, 84, 84);
@@ -17,7 +23,7 @@ header {
     font-family: "Libre Barcode 39 Text", cursive;
     font-size: 5rem;
     background-color: white;
-    margin-top: 7rem;
+    margin-top: 0;
     margin-bottom: 1rem;
     background: rgba(255, 255, 255, 0.205);
     border-radius: 16px;
@@ -32,7 +38,7 @@ header {
     font-size: 1.5rem;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     color: rgb(84, 84, 84);
     background: rgba(255, 255, 255, 0.205);
     border-radius: 16px;
@@ -42,23 +48,22 @@ header {
     padding: 2rem 3rem;
 }
 .card-shell {
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     justify-content: space-around;
-    margin-bottom: 15rem;
 }
 .card {
     box-sizing: border-box;
-    display: inline-flex;
-    padding: 4rem;
+    display: flex;
+    padding: 3rem;
     flex-direction: column;
     background-color: rgb(255, 214, 214);
-    min-width: 21rem;
+    width: 30rem;
+    height: 40rem;
     min-height: 32rem;
-    max-height: 39rem;
+    margin: 1rem;
     margin-bottom: 3rem;
     background: rgba(255, 255, 255, 0.205);
     border-radius: 16px;
@@ -72,7 +77,6 @@ header {
     transition-timing-function: ease-in-out;
     transition-delay: 0.4s;
     cursor: pointer;
-    overflow: hidden;
 }
 
 img {
@@ -100,4 +104,19 @@ img {
     min-height: 20rem;
     z-index: 10;
     margin: 8rem 12em;
+}
+@media (max-width: 2000px) {
+    .pics {
+        min-width: 1rem;
+        min-height: 1rem;
+        max-height: 22rem;
+    }
+    .card {
+        min-height: 25rem;
+        max-height: 30rem;
+        min-width: 22rem;
+    }
+    .card-shell {
+        width: 100vw;
+    }
 }
