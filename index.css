@@ -9,7 +9,10 @@ body {
     justify-content: space-around;
     margin: 0;
     padding-bottom: 3rem;
+    overflow-x: hidden;
+    height: 100vh;
 }
+
 /* This contains flashing name AND link bar */
 header {
     display: flex;
@@ -21,7 +24,7 @@ header {
 /* Full div containing navigation links */
 .top-bar {
     display: flex;
-    width: 92vw;
+    width: 75vw;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -32,7 +35,6 @@ header {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.1px);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 0rem 0rem;
     margin-bottom: 2rem;
 }
 /* This is each navigation link individually */
@@ -40,13 +42,12 @@ header {
 .resources,
 .rendered {
     font-family: "Press Start 2P", cursive;
-    font-size: 1.5rem;
-    padding: 0 1rem;
+    font-size: 1.7rem;
     transition-timing-function: ease-in-out;
     transition-duration: 1.3s;
 }
 .refrences {
-    font-size: 0.6rem;
+    font-size: 2rem;
     color: rgba(184, 43, 50, 0.7);
     text-transform: uppercase;
     transition-duration: 0.3s;
@@ -101,7 +102,7 @@ a {
 /* end of link customization */
 /* Currently with a flip and a flash */
 .name-thang {
-    color: rgba(0, 0, 0, 0.624);
+    color: rgba(113, 113, 113, 0.624);
     display: flex;
     padding: 0.5rem 4rem;
     font-family: "Libre Barcode 39 Text", cursive;
@@ -121,19 +122,23 @@ a {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 /* The card itself with hover-scale specifics included */
 .card {
     box-sizing: border-box;
     display: flex;
-    padding: 3rem;
+    justify-content: space-evenly;
+    padding: 1rem;
     flex-direction: column;
     background-color: rgb(255, 214, 214);
     width: 30rem;
-    height: 40rem;
-    min-height: 32rem;
-    margin: 1rem;
+    height: 60rem;
+    text-align: center;
+
+    margin: 0.5rem;
     margin-bottom: 3rem;
     background: rgba(255, 255, 255, 0.205);
     border-radius: 16px;
@@ -143,33 +148,15 @@ a {
         1.2px 11.7px 26.6px -24px rgba(0, 0, 0, 0.642),
         2.5px 23.9px 54.2px -24px rgba(0, 0, 0, 0.517),
         5.1px 49.3px 111.7px -24px rgba(0, 0, 0, 0.413), 14px 135px 306px -24px rgba(0, 0, 0, 0.288);
-    transition-duration: 0.1s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
     transition-delay: 0.4s;
     cursor: pointer;
 }
-/* Photosizing. Tricky! */
-img {
-    min-width: 22rem;
-    min-height: 21rem;
-    max-width: 22rem;
-}
-/* Div for full text content */
-.the-text {
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: 1rem;
-}
-.titler {
-    font-family: "Press Start 2P", cursive;
-}
-.descriptor {
-}
-
 /* On hover -- */
 .card:hover {
     position: relative;
-    transform: scale(1.5);
+    transform: scale(1.3);
     background: rgba(253, 145, 194, 0.205);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -180,6 +167,25 @@ img {
     z-index: 10;
     margin: 8rem 12em;
 }
+/* Photosizing. Tricky! */
+img {
+    height: 40vh;
+}
+/* Div for full text content */
+.the-text {
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 1rem;
+}
+.titler {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.descriptor {
+    margin-top: 2rem;
+}
+
 /* Images oversized and uncenterd on mobile without this  */
 @media (max-width: 2000px) {
     .pics {
@@ -195,4 +201,21 @@ img {
     .card-shell {
         width: 100vw;
     }
+}
+button {
+    color: rgb(56, 56, 56);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    transition-duration: 1s;
+    font-size: 0.8rem;
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+}
+button:hover {
+    opacity: 0.7;
+    background-color: rgb(255, 255, 255);
 }
