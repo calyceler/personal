@@ -1,6 +1,7 @@
+/* Sometimes you catch an exposed edge around the card holder space; fix it here */
 html,
 body {
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    background: linear-gradient(to left, #feac5e, #c779d0, #4bc0c8);
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +10,7 @@ body {
     margin: 0;
     padding-bottom: 3rem;
 }
+/* This contains flashing name AND link bar */
 header {
     display: flex;
     flex-direction: column;
@@ -16,37 +18,104 @@ header {
     align-items: center;
     margin-top: 1rem;
 }
-.first {
-    color: rgb(84, 84, 84);
+/* Full div containing navigation links */
+.top-bar {
     display: flex;
-    padding: 3rem;
+    width: 92vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 3rem;
+    color: rgb(84, 84, 84);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0rem 0rem;
+    margin-bottom: 2rem;
+}
+/* This is each navigation link individually */
+.refrences,
+.resources,
+.rendered {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.3s;
+}
+.refrences {
+    font-size: 0.6rem;
+    color: rgba(184, 43, 50, 0.7);
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+.refrences:hover {
+    cursor: pointer;
+    opacity: 0.3;
+}
+/* State of the links - ALL */
+a {
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+}
+/* link specifics RESOURCES */
+.lres:link {
+    text-decoration: none;
+    color: rgb(255, 237, 44, 0.5);
+}
+.lres:visited {
+    text-decoration: none;
+    color: rgb(255, 237, 44, 0.5);
+}
+.lres:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(255, 237, 44, 0.8);
+}
+.lres:active {
+    text-decoration: none;
+    color: rgb(255, 237, 44, 0.5);
+}
+/* END */
+/* link specifics RENDERS */
+.lren:link {
+    text-decoration: none;
+    color: rgb(103, 167, 93, 0.5);
+}
+.lren:active {
+    text-decoration: none;
+    color: rgb(103, 167, 93, 0.3);
+}
+.lren:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(103, 167, 93, 0.8);
+}
+.lren:visited {
+    text-decoration: none;
+    color: rgb(103, 167, 93, 0.5);
+}
+
+/* end of link customization */
+/* Currently with a flip and a flash */
+.name-thang {
+    color: rgba(0, 0, 0, 0.624);
+    display: flex;
+    padding: 0.5rem 4rem;
     font-family: "Libre Barcode 39 Text", cursive;
-    font-size: 5rem;
+    font-size: 3.5rem;
     background-color: white;
     margin-top: 0;
     margin-bottom: 1rem;
-    background: rgba(255, 255, 255, 0.205);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13px);
-    backdrop-filter: blur(13px);
+    backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.subtext {
-    font-family: "EB Garamond", serif;
-    text-decoration: underline;
-    text-underline-offset: 0.7rem;
-    font-size: 1.5rem;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-bottom: 2rem;
-    color: rgb(84, 84, 84);
-    background: rgba(255, 255, 255, 0.205);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13px);
-    backdrop-filter: blur(13px);
-    padding: 2rem 3rem;
-}
+/* Full card area background. May be unneccessary */
 .card-shell {
     box-sizing: border-box;
     display: flex;
@@ -54,6 +123,7 @@ header {
     position: relative;
     justify-content: space-around;
 }
+/* The card itself with hover-scale specifics included */
 .card {
     box-sizing: border-box;
     display: flex;
@@ -78,12 +148,13 @@ header {
     transition-delay: 0.4s;
     cursor: pointer;
 }
-
+/* Photosizing. Tricky! */
 img {
     min-width: 22rem;
     min-height: 21rem;
     max-width: 22rem;
 }
+/* Div for full text content */
 .the-text {
     justify-content: flex-start;
     align-items: flex-end;
@@ -92,6 +163,10 @@ img {
 .titler {
     font-family: "Press Start 2P", cursive;
 }
+.descriptor {
+}
+
+/* On hover -- */
 .card:hover {
     position: relative;
     transform: scale(1.5);
@@ -105,6 +180,7 @@ img {
     z-index: 10;
     margin: 8rem 12em;
 }
+/* Images oversized and uncenterd on mobile without this  */
 @media (max-width: 2000px) {
     .pics {
         min-width: 1rem;
